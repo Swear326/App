@@ -1,0 +1,384 @@
+ {include file="../Common/header.html"}
+
+	    
+<div id="main">
+	<div id="banner" class="banner-wrap clearfix">
+		
+    	<div class="banner-left fl">
+     		<div id="bannerContent" class="content">
+				<ul>
+                	<li>
+                		<a href="javascript:;">
+                			<img src="./Public/home/img/s-banner3.jpg" width="480" height="300" alt="">
+                		</a>
+                	</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./Public/home/img/s-banner1.jpg" width="480" height="300" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./Public/home/img/s-banner2.jpg" width="480" height="300" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./Public/home/img/s-banner4.jpg" width="480" height="300" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./Public/home/img/s-banner5.jpg" width="480" height="300" alt="">
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="switch-btn-box">
+				<div class="hover-bg"></div>
+				<ul id="switchBtn">
+            		<li>
+            			<a href="javascript:;">
+            				<img src="./Public/home/img/s-b3.jpg" width="100" height="50">
+            			</a>
+            		</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./Public/home/img/s-b1.jpg" width="100" height="50">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./Public/home/img/s-b2.jpg" width="100" height="50">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./Public/home/img/s-b4.jpg" width="100" height="50">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./Public/home/img/s-b5.jpg" width="100" height="50">
+						</a>
+					</li>
+				</ul>
+			</div>
+     	</div>
+     	
+     	<div class="banner-right fr">
+      		<p class="banner-right-text">
+      			微笑面对一切<br /><br />哈哈哈哈哈
+      			<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--赵小康！
+      		</p>
+   		</div>
+	</div>
+ 	
+	<div class="show-module-wrap clearfix"></div>
+	    
+ 	<div class="main-content clearfix">
+   		
+     	<div class="main-content-box fl">
+           	<h2 class="title-h2">
+           		文章推荐
+           	</h2>
+           	
+			<div class="article-list">
+				<ul class="list">
+					{foreach $articleList as $art}
+					<li class="li-text clearfix">
+						<div class="news-img-box fl">
+							<a href="#/learn232.html" target="_blank">
+								{if $art.img}
+								<img class="news-list-img" src="./Public/upload/{$art.img}" width="215" height="144" alt="如何建立个人博客？">
+								{else}
+								<img class="news-list-img" src="./Public/home/img/1-1406052123280-L.jpg" width="215" height="144" alt="如何建立个人博客？">
+								{/if}
+							</a>
+
+						</div>
+						<div class="news-content fr">
+							<h3 class="title-h3">
+								<a href="./index.php?p=home&c=article&a=detail&id={$art.id}" target="_blank">
+									{$art.title}
+								</a>
+							</h3>
+							<div class="author-info clearfix">
+								<p class="author fl">
+									<a href="/about/">
+										<img src="./Public/home/img/author.png" width="33" height="33" alt="你大爷">
+										<span>{$art.uname}</span>
+									</a>
+								</p>
+								<span class="date-time fl">
+									发布时间：
+										<em>
+											{$art.created_time|date_format:'Y-m-d H:i'}
+										</em>
+								</span>
+								<span class="classify fl">
+									分类：<a href="#/learn/">{$art.cateName}</a>
+								</span>
+							</div>
+							<p class="news-info">
+							{$art.desc}
+							</p>
+						</div>
+					</li>
+					{/foreach}
+
+
+				</ul>
+			</div>
+           	
+           	
+            <div class="page-wrap-box">{$articlepage}
+				<!--<ul class="list clearfix">-->
+					<!--<li class="thisclass">1</li>-->
+					<!--<li><a href="xxxx">2</a></li>-->
+					<!--<li><a href="xxxx">下一页</a></li>-->
+				<!--</ul>-->
+			</div>
+    	</div>
+     	
+     	<div class="main-content-side fr">
+     		
+     		<div id="searchBox">
+	     		<h2 class="title-h2">
+	           		站内搜索
+	           	</h2>
+	           	<div class="search-wrap">
+		   			<form name="formsearch" action="/plus/search.php" method="post">
+				        <input name="q" type="text" id="searchValue" class="search-value" placeholder="请输入你需要的内容">   
+				        <input class="search-btn" type="submit" value="">
+				    </form>
+				    
+	           	</div>
+           	</div>
+           	
+        	<div class="side-nav">
+          		<ul class="clearfix">
+          			<li class="nav-1">
+          				<a href="/about/">关于我</a>
+          			</li>
+          			<li class="nav-2">
+          				<a href="/video/">视频教程</a>
+          			</li>
+          			<li class="nav-3">
+          				<a href="/learn/">SEO优化</a>
+          			</li>
+          			<li class="nav-4">
+          				<a href="/Guestbook/">留言版</a>
+          			</li>
+          		</ul>
+          	</div>
+	       	<div class="concern-blog">
+	       		<h2 class="title-h2">
+		       		关注博客
+		       	</h2>
+				<ul class="list">
+					<li class="clearfix">
+						<p class="title fl">
+							邮箱订阅：	
+						</p>
+						<a class="bg-ico ico-1 fl" href="http://list.qq.com/cgi-bin/qf_invite?id=111" title="关注xx博客" target="_blank" rel="nofollow">
+						</a>
+					</li>
+					<li class="clearfix">
+						<p class="title fl">
+							联系你大爷:	
+						</p>
+						<a class="bg-ico ico-2 fl" href="##" title="联系传值" target="_blank" rel="nofollow">
+						</a>
+					</li>
+					<li class="clearfix">
+						<p class="title fl">
+							加入群聊：	
+						</p>
+						<a class="bg-ico ico-3 fl" href="http://shang.qq.com/wpa/qunwpa?idkey=xxx" title="PHP高级开发" target="_blank" rel="nofollow">
+						</a>
+					</li>
+					<li class="clearfix">
+						<p class="title fl">
+							关注微博：	
+						</p>
+						<a class="ico-4 fl" href="http://weibo.com/u/xxxx" title="关注传值博客官方新浪微博" target="_blank" rel="nofollow">
+						</a>
+					</li>
+				</ul>
+	        </div>
+	        
+	        <div class="hot-recommend-wrap">
+				<h2 class="title-h2">热门推荐</h2>
+	            <div id="hotRecommend" class="hot-recommend">
+	                <div class="hot-recommend-content">
+		                <div class="list">
+		                    <ul>
+								<li>
+									<a href="./list.html" title="1111">
+										浅谈：html5和html的区别
+									</a>
+								</li>
+								<li>
+									<a href="./list.html" title="1111">
+										如何建立个人博客？
+									</a>
+								</li>
+								<li>
+									<a href="./list.html" title="1111">
+										如何建立个人博客？
+									</a>
+								</li>
+								<li>
+									<a href="./list.html" title="11111">
+										如何建立个人博客？
+									</a>
+								</li>
+								<li>
+									<a href="./list.html" title="1111">
+										如何建立个人博客？
+									</a>
+								</li>
+								<li>
+									<a href="./list.html" title="1111">
+										简单三步-实现dede站内搜索功能
+									</a>
+								</li>
+								<li>
+									<a href="./list.html" title="1111">
+										如何建立个人博客？
+									</a>
+								</li>
+								<li>
+									<a href="./list.html" title="1111">
+										简单三步-实现dede站内搜索功能
+									</a>
+								</li>
+		                    </ul>
+		                </div>
+		            </div>
+	            </div>     
+	        </div>
+	        
+	        
+	        <div class="along-the-way">
+	        	<h2 class="title-h2">最新评论</h2>
+	           	<ul class="list">
+	           		<li>
+	           			<p class="date-time">
+	           				2014-03-7
+	           			</p>
+	           			<p class="content-text">
+	           				个人博客发布1.0 Beta版本
+	           			</p>
+	           		</li>
+	           		<li>
+	           			<p class="date-time">
+	           				2014-03-23
+	           			</p>
+	           			<p class="content-text">
+	           				完善网站基本功能：增加内页评论功能...<br>
+	           				1.0版本正式发布
+	           			</p>
+	           		</li>
+	           		<li>
+	           			<p class="date-time">
+	           				2014-08-20
+	           			</p>
+	           			<p class="content-text">
+	           				博客风格进行改版，并优化网站细节。<br>
+							2.0版本正式发布
+	           			</p>
+	           		</li>
+	           		<li>
+	           			<p class="date-time">
+	           				2015-04-6
+	           			</p>
+	           			<p class="content-text">
+	           				对栏目进行改版布局，并添加新功能：百度站内搜索和你大爷博客官方微信公众号！<br>
+							3.0 Beta版本发布
+	           			</p>
+	           		</li>
+	           		<li>
+	           			<p class="date-time">
+	           				2016-08-14
+	           			</p>
+	           			<p class="content-text">
+	           				对网站整体风格进行改版，并对代码进行重新优化构建。增加网站站内搜索功能！
+	           				<br>
+							3.0版本正式发布
+	           			</p>
+	           		</li>
+	           	</ul>
+	        </div>
+	        
+	        <div class="link-wrap">
+	        	<h2 class="title-h2">
+	           		友情链接
+	           	</h2>
+                <ul class="list clearfix">
+                    <li>
+                    	<a href="hxxxx" target="_blank" title="网站模板">
+                    		网站模板
+                    	</a>
+                    </li>
+                    <li>
+                    	<a href="http://www.itcast.cn" target="_blank" title="传值博客">
+                    		传值博客
+                    	</a>
+                    </li>
+                 	<li>
+                 		<a href="http://bbs.0dianidc.com/" target="_blank" title="站长论坛">
+                 			站长论坛
+                 		</a>
+                 	</li>
+                 	<li>
+                 		<a href="http://www.xxx.com/" target="_blank" title="xx">
+                 			你爸爸博客
+                 		</a>
+                 	</li>
+                 	<li>
+                 		<a href="http://www.xx.com/" target="_blank" title="你爸爸博客">
+                 			嘿嘿
+                 		</a>
+                 	</li>
+                </ul>
+	        </div>
+	        
+        </div>
+   	</div>
+      
+	<footer class="footer-wrap">
+	<p>
+		<span>Design by：传值博客</span>
+		<span>备案号：<strong>沪ICP备XXXXXXXX号-2</strong></span>
+	</p>
+</footer>
+</div>
+	
+<div class="fixed-side-menu">
+	<ul class="list">
+		<li id="returnTop">
+			<a class="ico-bg return-top" href="javascript:;">
+			</a>
+		</li>
+		<li>
+			<a class="ico-bg qq" href="http://wpa.qq.com/msgrd?v=3&amp;uin=88888888888&amp;site=qq&amp;menu=yes" target="_blank">
+			</a>
+		</li>
+		<li id="wechatBoxWrap" class="wechat-box-wrap">
+			<a class="ico-bg wechat" href="javascript:;"></a>
+			<div class="wechat-img">
+				<img src="./Public/home/img/weixin.png" width="150" height="135" alt="你大爷博客官方微信公众号">
+			</div>
+		</li>
+	</ul>
+</div>
+
+
+      
+	<script type="text/javascript" src="./Public/home/js/common.js"></script>
+	<script type="text/javascript" src="./Public/home/js/index.js"></script>
+
+</body>
+</html>

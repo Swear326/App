@@ -1,0 +1,116 @@
+{include file="../Common/header.html"}
+
+
+	    
+<div id="main" class="add">
+
+	<div class="show-module-wrap clearfix"></div>
+	    
+ 	<div class="main-content clearfix">
+   		
+     	<div class="main-content-box fl">
+          
+			<div class="article-list">
+				<div class="content-text-box">
+					<!-- content-header -->
+		 			<h1 class="title-h1">
+		 				{$artInfo.title}
+		 			</h1>
+		 			<div class="detail-info-box">
+			            <ul class="clearfix">
+			               	<li>
+			               		编辑时间：<span class="date-time">{$artInfo.updated_time|date_format:'Y-m-d'}</span>
+			               	</li>    
+			               	<li id="Browse">
+			               		浏览量：<span id="countnum">{$artInfo.pv}</span>
+			               	</li>
+			               	<li>
+			               		作者：<span class="author">{$artInfo.author}</span>
+			               	</li>
+			            </ul>
+				     </div>
+					<!-- /content-header -->
+				
+					<!--内容-->
+				    <div class="content">
+						{$artInfo.content}
+				    </div>
+					<!--/内容-->
+			    	
+			    	<!---上一页下一页-->
+				    <div class="page-wrap-box">
+				    	<div class="page-text">
+				    		上一篇：<a href="learn198.html">手机网站开发</a> <br>
+				    		下一篇：<a href="/learn235.html">常见的个人博客系统</a> 
+				    	</div>
+				    </div>
+			    	<!---/上一页下一页-->
+
+			    	<!--评论--> 
+					<div id="comment">
+						<div class="comment">
+							<div class="c_fl">
+								<img src="http://v2.uyan.cc/images/uface.jpg" width="55" height="55" />
+							</div>
+							<div class="c_fr">
+								<a href="##">Allison</a>•<span class="time">8月1日 16:28</span>
+								<a href="" class="reply">回复</a>
+								<p>
+									kjhg
+								</p>
+							</div>
+						</div>
+						<hr>
+						<form action="index.php?p=home&c=comment&a=add" method="post">
+							<textarea name="content" style="width: 80%;height: 60px;"></textarea>
+							<br>
+							<input type="text" name="aid" value="{artInfo.id}"/>
+							<input type="text" name="pid" value="0">
+							<input type="submit" value="提交">
+						</form>
+					</div>
+			    	<!--/评论-->
+
+	 			</div>
+			</div>
+   
+    	</div>
+   	</div>
+      
+	<footer class="footer-wrap">
+		<p>
+			<span>Design </span>
+			<span>备案号：<strong>沪ICP-2</strong></span>
+		</p>
+	</footer>
+</div>
+	
+<div class="fixed-side-menu">
+	<ul class="list">
+		<li id="returnTop">
+			<a class="ico-bg return-top" href="javascript:;">
+			</a>
+		</li>
+		<li>
+			<a class="ico-bg qq" href="http://wpa.qq.com/msgrd?v=3&amp;uin=88888888888&amp;site=qq&amp;menu=yes" target="_blank">
+			</a>
+		</li>
+		<li id="wechatBoxWrap" class="wechat-box-wrap">
+			<a class="ico-bg wechat" href="javascript:;"></a>
+			<div class="wechat-img">
+				<img src="./Public/home/img/weixin.png" width="150" height="135" alt="你xxx微信公众号">
+			</div>
+		</li>
+	</ul>
+</div>
+
+
+      
+	<script type="text/javascript" src="./Public/home/js/common.js"></script>
+	<script type="text/javascript" src="./Public/home/js/index.js"></script>
+
+<!-- JiaThis Button BEGIN -->
+<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?move=0" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+</body>
+</html>
